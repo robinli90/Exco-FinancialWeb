@@ -1,0 +1,97 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Report Website", "Report Website\", "{F4B1BD52-2503-4A1E-8CE8-5703E1BBE199}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""
+		SccAuxPath = ""
+		SccLocalPath = ""
+		SccProvider = ""
+		Frontpage = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{70FCC235-AD76-4D6C-A332-52FD00D429A2}|ExcoUtility.dll;{b00cc1a3-1ea5-4437-a0b7-a0b63dd95484}|SalesReport.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Report Website"
+		Debug.AspNetCompiler.PhysicalPath = "Report Website\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Report Website\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Report Website"
+		Release.AspNetCompiler.PhysicalPath = "Report Website\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Report Website\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60516"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{69016693-52E9-4225-BA2C-2884107A83E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcoUtility", "ExcoUtility\ExcoUtility.csproj", "{70FCC235-AD76-4D6C-A332-52FD00D429A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesReport", "SalesReport\SalesReport.csproj", "{B00CC1A3-1EA5-4437-A0B7-A0B63DD95484}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeStatementReport", "IncomeStatementReport\IncomeStatementReport.csproj", "{B171B203-550E-41B4-8BE6-C6F3CB91259A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4B1BD52-2503-4A1E-8CE8-5703E1BBE199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B1BD52-2503-4A1E-8CE8-5703E1BBE199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B1BD52-2503-4A1E-8CE8-5703E1BBE199}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F4B1BD52-2503-4A1E-8CE8-5703E1BBE199}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F4B1BD52-2503-4A1E-8CE8-5703E1BBE199}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F4B1BD52-2503-4A1E-8CE8-5703E1BBE199}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B1BD52-2503-4A1E-8CE8-5703E1BBE199}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{F4B1BD52-2503-4A1E-8CE8-5703E1BBE199}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F4B1BD52-2503-4A1E-8CE8-5703E1BBE199}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F4B1BD52-2503-4A1E-8CE8-5703E1BBE199}.Release|x86.ActiveCfg = Debug|Any CPU
+		{70FCC235-AD76-4D6C-A332-52FD00D429A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70FCC235-AD76-4D6C-A332-52FD00D429A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70FCC235-AD76-4D6C-A332-52FD00D429A2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{70FCC235-AD76-4D6C-A332-52FD00D429A2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{70FCC235-AD76-4D6C-A332-52FD00D429A2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{70FCC235-AD76-4D6C-A332-52FD00D429A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70FCC235-AD76-4D6C-A332-52FD00D429A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70FCC235-AD76-4D6C-A332-52FD00D429A2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{70FCC235-AD76-4D6C-A332-52FD00D429A2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{70FCC235-AD76-4D6C-A332-52FD00D429A2}.Release|x86.ActiveCfg = Release|Any CPU
+		{B00CC1A3-1EA5-4437-A0B7-A0B63DD95484}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{B00CC1A3-1EA5-4437-A0B7-A0B63DD95484}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{B00CC1A3-1EA5-4437-A0B7-A0B63DD95484}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{B00CC1A3-1EA5-4437-A0B7-A0B63DD95484}.Debug|x86.ActiveCfg = Debug|x86
+		{B00CC1A3-1EA5-4437-A0B7-A0B63DD95484}.Debug|x86.Build.0 = Debug|x86
+		{B00CC1A3-1EA5-4437-A0B7-A0B63DD95484}.Release|Any CPU.ActiveCfg = Release|x86
+		{B00CC1A3-1EA5-4437-A0B7-A0B63DD95484}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{B00CC1A3-1EA5-4437-A0B7-A0B63DD95484}.Release|Mixed Platforms.Build.0 = Release|x86
+		{B00CC1A3-1EA5-4437-A0B7-A0B63DD95484}.Release|x86.ActiveCfg = Release|x86
+		{B00CC1A3-1EA5-4437-A0B7-A0B63DD95484}.Release|x86.Build.0 = Release|x86
+		{B171B203-550E-41B4-8BE6-C6F3CB91259A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B171B203-550E-41B4-8BE6-C6F3CB91259A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B171B203-550E-41B4-8BE6-C6F3CB91259A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B171B203-550E-41B4-8BE6-C6F3CB91259A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B171B203-550E-41B4-8BE6-C6F3CB91259A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B171B203-550E-41B4-8BE6-C6F3CB91259A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B171B203-550E-41B4-8BE6-C6F3CB91259A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B171B203-550E-41B4-8BE6-C6F3CB91259A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B171B203-550E-41B4-8BE6-C6F3CB91259A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B171B203-550E-41B4-8BE6-C6F3CB91259A}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{70FCC235-AD76-4D6C-A332-52FD00D429A2} = {69016693-52E9-4225-BA2C-2884107A83E9}
+		{B00CC1A3-1EA5-4437-A0B7-A0B63DD95484} = {69016693-52E9-4225-BA2C-2884107A83E9}
+		{B171B203-550E-41B4-8BE6-C6F3CB91259A} = {69016693-52E9-4225-BA2C-2884107A83E9}
+	EndGlobalSection
+EndGlobal
