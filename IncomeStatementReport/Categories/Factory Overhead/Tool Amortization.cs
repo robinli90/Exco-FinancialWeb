@@ -14,7 +14,7 @@ namespace IncomeStatementReport.Categories.Factory_Overhead
             // add accounts
             plant01.accountList.Add(new Account("100", "415500"));
             plant03.accountList.Add(new Account("300", "415500"));
-            plant04.accountList.Add(new Account("473", "60501")); //aded
+            plant04.accountList.Add(new Account("473", "60501")); //added
             plant41.accountList.Add(new Account("4173", "60501"));
             plant05.accountList.Add(new Account("500", "415500"));
             // process accounts

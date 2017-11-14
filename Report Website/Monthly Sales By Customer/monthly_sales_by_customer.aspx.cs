@@ -25,12 +25,14 @@ public partial class Monthly_Sales_By_Customer : System.Web.UI.Page
         public double dDiscount;
         public double dSurcharge;
         public double dFastTrack;
+        public double dFreight;
         public string sCity;
     };
 
     protected void Page_Load(object sender, EventArgs e)
     {
         // load all fiscal years
+        YearList.Items.Add("2018");
         YearList.Items.Add("2017");
         YearList.Items.Add("2016");
         YearList.Items.Add("2015");
@@ -125,14 +127,14 @@ public partial class Monthly_Sales_By_Customer : System.Web.UI.Page
         }
         else
         {
-            query = "select distinct dhinv#, dhexrt, bvcity from cmsdat.oih, cmsdat.cust where (dhbnam like '%" + sCustomerName + "%' or dhbnam like '%" + sCustomerName.ToUpper() + "%') and (dhidat<='" + YearList.SelectedValue + "-" + (MonthList.SelectedIndex + 2).ToString("D2") + "-01' and dhidat>='" + YearList.SelectedValue + "-" + MonthList.SelectedValue + "-01') and bvcust=dhscs# order by bvcity";
+            query = "select distinct dhinv#, dhexrt, bvcity from cmsdat.oih, cmsdat.cust where (dhbnam like '%" + sCustomerName + "%' or dhbnam like '%" + sCustomerName.ToUpper() + "%') and (dhidat<'" + YearList.SelectedValue + "-" + (MonthList.SelectedIndex + 2).ToString("D2") + "-01' and dhidat>='" + YearList.SelectedValue + "-" + MonthList.SelectedValue + "-01') and bvcust=dhscs# order by bvcity";
         }
         OdbcDataReader reader = database.RunQuery(query);
         while (reader.Read())
         {
             Invoice invoice = new Invoice();
             invoice.sInvNum = reader["dhinv#"].ToString().Trim();
-            invoice.dConversionRate = Convert.ToDouble(reader["dhexrt"]);
+            invoice.dConversionRate = 1;//Convert.ToDouble(reader["dhexrt"]);
             invoice.sCity = reader["bvcity"].ToString().Trim();
             invoiceList.Add(invoice);
         }
@@ -189,6 +191,19 @@ public partial class Monthly_Sales_By_Customer : System.Web.UI.Page
             }
             reader.Close();
         }
+        // freight
+        for (int i = 0; i < invoiceList.Count; i++)
+        {
+            query = "select DIEXT from cmsdat.oid where dipart like 'FREIGHT%' AND DIINV# = " + invoiceList[i].sInvNum;
+            reader = database.RunQuery(query);
+            if (reader.Read())
+            {
+                Invoice invoice = invoiceList[i];
+                invoice.dFreight = Convert.ToDouble(reader[0]);
+                invoiceList[i] = invoice;
+            }
+            reader.Close();
+        }
         // write to data table
         DataTable table = new DataTable();
         double dSummaryByCity = 0.0;
@@ -205,12 +220,12 @@ public partial class Monthly_Sales_By_Customer : System.Web.UI.Page
                     summaryList.Add(dSummaryByCity);
                 }
                 // new city
-                dSummaryByCity = (invoice.dSale + invoice.dFastTrack + invoice.dSurcharge + invoice.dDiscount) * invoice.dConversionRate;
+                dSummaryByCity = (invoice.dSale + invoice.dFastTrack + invoice.dSurcharge + invoice.dFreight + invoice.dDiscount) * invoice.dConversionRate;
                 sCity = invoice.sCity;
             }
             else
             {
-                dSummaryByCity += (invoice.dSale + invoice.dFastTrack + invoice.dSurcharge + invoice.dDiscount) * invoice.dConversionRate;
+                dSummaryByCity += (invoice.dSale + invoice.dFastTrack + invoice.dSurcharge + invoice.dFreight + invoice.dDiscount) * invoice.dConversionRate;
             }
         }
         // last city

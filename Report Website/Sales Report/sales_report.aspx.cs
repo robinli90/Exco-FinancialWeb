@@ -56,7 +56,7 @@ public partial class sales_report : System.Web.UI.Page
         connection.Open();
         var command = new OdbcCommand();
         command.Connection = connection;
-        var query = "select distinct aj4ccyy from cmsdat.glmt where aj4ccyy<2017 order by aj4ccyy desc";
+        var query = "select distinct aj4ccyy from cmsdat.glmt where aj4ccyy<2019 order by aj4ccyy desc";
         command.CommandText = query;
         var reader = command.ExecuteReader();
         while (reader.Read())

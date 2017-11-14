@@ -99,6 +99,8 @@ public partial class income_statement_report : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        //ExcoExRate.GetExchangeRatesFromFile();
+
         SelectConsolidate.Visible = true;
 
         if (true == (bool)Session["_hasIncomeStatementReportTexas"])
@@ -123,7 +125,7 @@ public partial class income_statement_report : System.Web.UI.Page
         connection.Open();
         var command = new OdbcCommand();
         command.Connection = connection;
-        var query = "select distinct aj4ccyy from cmsdat.glmt where aj4ccyy<2018 order by aj4ccyy desc";
+        var query = "select distinct aj4ccyy from cmsdat.glmt where aj4ccyy<2019 order by aj4ccyy desc";
         command.CommandText = query;
         var reader = command.ExecuteReader();
         while (reader.Read())
