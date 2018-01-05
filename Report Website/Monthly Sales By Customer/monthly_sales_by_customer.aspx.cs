@@ -116,6 +116,7 @@ public partial class Monthly_Sales_By_Customer : System.Web.UI.Page
         {
             sCustomerName = "Sapa";
         }
+
         // get data
         List<Invoice> invoiceList = new List<Invoice>();
         ExcoODBC database = ExcoODBC.Instance;

@@ -7,7 +7,7 @@ namespace ExcoUtility
 {
     // processes money and currency conversion
     public class ExcoMoney
-    {
+    { 
         // money amount in CAD
         public double amountCA = 0.0;
         // money amount in USD
@@ -23,6 +23,7 @@ namespace ExcoUtility
             amountCA = amount * ExcoExRate.GetToCADRate(calendar, currency);
             amountCP = amount * ExcoExRate.GetToPESORate(calendar, currency);
             amountUS = amount * ExcoExRate.GetToUSDRate(calendar, currency);
+
             this.currency = currency;
         }
 
